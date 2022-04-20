@@ -12,7 +12,7 @@ import {
 } from "react-native";
 import { TabView, TabBar } from 'react-native-tab-view';
 import { Fonts, Colors, Sizes } from "../constants/styles";
-import { AllData, WatchlistData, TopGainerData, TopLosersData } from "./statisticDataLists";
+import { AllData, WatchlistData, TopGainerData, TopLosersData, tokenIds } from "./statisticDataLists";
 import { AntDesign } from '@expo/vector-icons';
 import { SwipeListView } from 'react-native-swipe-list-view';
 import { Snackbar } from 'react-native-paper';
@@ -34,21 +34,23 @@ export default TabBarScreen = ({ navigation }) => {
     const [coinData, setCoinData] = useState([]);
 
     useEffect(() => {
+        let ids = tokenIds.map(x => x.id)
         axios
-            .get(
-                'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=24H'
-            )
-            .then(res => {
-                setCoinData(res.data);
-            }).catch(error => console.log(error))
-        // axios
-        //     .get(
-        //         'https://api.coingecko.com/api/v3/coins/metagods'
-        //     )
-        //     .then(res => {
-        //         console.log(res.data);
-        //         //setCoinData([res.data]);
-        //     }).catch(error => console.log(error))
+        .get(`https://api.coingecko.com/api/v3/simple/price?ids=${ids.join()}&include_market_cap=true&include_24hr_change=true&vs_currencies=usd`)
+        .then(res => {
+            let coins = [];
+            for (key of Object.keys(res.data)) {
+              const obj = {
+                  name : tokenIds.find( x => x.id === key).name,
+                  ticker : tokenIds.find( x => x.id === key).ticker,
+                  id : key,
+                  usd : res.data[key].usd,
+                  change_24hr : res.data[key].usd_24h_change
+              }
+              coins.push(obj)
+            }
+            setCoinData(coins);
+        })
     }, [])
 
     const renderScene = ({ route, jumpTo }) => {
@@ -246,31 +248,31 @@ const Currency = ({ data, navigation }) => {
         >
             <View style={styles.currencyInfoContainerStyle}>
                 <View style={{ flexDirection: 'row', alignItems: 'center', }}>
-                    <Image
+                    {/* <Image
                         source={{uri: item.image}}
                         style={{ height: 55.0, width: 55.0, borderRadius: 27.5 }}
                         resizeMode="contain"
-                    />
+                    /> */}
                     <View style={{ marginLeft: Sizes.fixPadding }}>
                         <Text style={{ ...Fonts.black16Medium }}>{item.name}</Text>
                         <View style={{ flexDirection: 'row', marginTop: Sizes.fixPadding - 5.0 }}>
                             <Text style={{ ...Fonts.blackMedium, marginRight: Sizes.fixPadding + 5.0 }}>
-                                {item.sortName}
+                                {item.ticker}
                             </Text>
                             <AntDesign
-                                name={item.price_change_24h > 0 == true ? "caretup" : "caretdown"} size={12}
-                                color={item.price_change_24h > 0 == true ? Colors.primaryColor : 'red'}
+                                name={item.change_24hr > 0 == true ? "caretup" : "caretdown"} size={12}
+                                color={item.change_24hr > 0 == true ? Colors.primaryColor : 'red'}
                                 style={{ marginTop: 3.0, marginRight: Sizes.fixPadding - 2.0 }}
                             />
                             <Text style={{ ...Fonts.blackMedium }}>
-                                {item.price_change_percentage_24h}%
+                                {item.change_24hr}%
                             </Text>
                         </View>
                     </View>
                 </View>
                 <View>
                     <Text style={{ ...Fonts.black16SemiBold }}>
-                        ${item.current_price}
+                        ${item.usd}
                     </Text>
                 </View>
             </View>
