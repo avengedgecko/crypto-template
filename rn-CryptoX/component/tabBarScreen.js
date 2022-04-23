@@ -43,9 +43,10 @@ export default TabBarScreen = ({ navigation }) => {
               const obj = {
                   name : tokenIds.find( x => x.id === key).name,
                   ticker : tokenIds.find( x => x.id === key).ticker,
+                  image : tokenIds.find( x => x.id === key).image,
                   id : key,
-                  usd : res.data[key].usd,
-                  change_24hr : res.data[key].usd_24h_change
+                  usd : res.data[key].usd.toFixed(5),
+                  change_24hr : res.data[key].usd_24h_change.toFixed(2),
               }
               coins.push(obj)
             }
@@ -248,11 +249,11 @@ const Currency = ({ data, navigation }) => {
         >
             <View style={styles.currencyInfoContainerStyle}>
                 <View style={{ flexDirection: 'row', alignItems: 'center', }}>
-                    {/* <Image
+                    <Image
                         source={{uri: item.image}}
                         style={{ height: 55.0, width: 55.0, borderRadius: 27.5 }}
                         resizeMode="contain"
-                    /> */}
+                    />
                     <View style={{ marginLeft: Sizes.fixPadding }}>
                         <Text style={{ ...Fonts.black16Medium }}>{item.name}</Text>
                         <View style={{ flexDirection: 'row', marginTop: Sizes.fixPadding - 5.0 }}>

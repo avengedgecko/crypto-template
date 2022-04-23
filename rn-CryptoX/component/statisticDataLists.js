@@ -4,157 +4,164 @@ export const tokenIds = [
     {
         name: "Meta Gods",
         id: "metagods",
-        ticker: "MGODS"
+        ticker: "MGODS",
+        image: "https://assets.coingecko.com/coins/images/21666/large/n9xlniyOphEZp40cR7OnXO1p5H8kI8rLGn6vbx8AaVGiYi250HIeNISTx7eMHU-Ym5XRc9nFPmNXfRZmr3QglH1Svte4Tisu2EZPU3JVFKlPLLnQwDXhodgYcSt0Xb33kyrA_yqFEZnMw1q5qi-4KgdHd4bHv7MKNz2rF3MuA_RWdylgpB3xdUoaxoiMLqzlVbEatJYnDQyhqvh.jpg?1639704500"
     },
     {
         name: "Sidus",
         id: "sidus",
-        ticker: "SIDUS"
-    },
-    {
-        name: "Thetan Arena",
-        id: "theta-arena",
-        ticker: "THG"
+        ticker: "SIDUS",
+        image: "https://assets.coingecko.com/coins/images/21401/large/SIDUS_coin_logo.png?1639405031"
     },
     {
         name: "Affyn",
         id: "affyn",
-        ticker: "FYN"
+        ticker: "FYN",
+        image: "https://assets.coingecko.com/coins/images/23275/large/fyn.png?1643526250"
     },
     {
         name: "Pegaxy Stone",
         id: "pegaxy-stone",
-        ticker: "PGX"
+        ticker: "PGX",
+        image: "https://assets.coingecko.com/coins/images/19305/large/Logo_200x200_%281%29.png?1634972378"
     },
     {
         name: "UFO Gaming",
         id: "ufo-gaming",
-        ticker: "UFO"
+        ticker: "UFO",
+        image: "https://assets.coingecko.com/coins/images/16801/large/ufo.png?1644048038"
     },
     {
         name: "Gala",
         id: "gala",
-        ticker: "GALA"
+        ticker: "GALA",
+        image: "https://assets.coingecko.com/coins/images/12493/large/GALA-COINGECKO.png?1600233435"
     },
     {
         name: "Dragon Kart Token",
         id: "dragon-kart-token",
-        ticker: "KART"
+        ticker: "KART",
+        image: "https://assets.coingecko.com/coins/images/19916/large/kart.png?1636182962"
     },
     {
         name: "Splinterlands",
         id: "splinterlands",
-        ticker: "SPS"
+        ticker: "SPS",
+        image: "https://assets.coingecko.com/coins/images/17332/large/splinter.PNG?1627339560"
     },
     {
         name: "Gods Unchained",
         id: "gods-unchained",
-        ticker: "GODS"
+        ticker: "GODS",
+        image: "https://assets.coingecko.com/coins/images/17139/large/10631.png?1635718182"
     },
     {
         name: "My Neightbor Alice",
         id: "my-neighbor-alice",
-        ticker: "ALICE"
-    },
-    {
-        name: "Mines of Delarnia",
-        id: "mines-of-delarnia",
-        ticker: "DAR"
+        ticker: "ALICE",
+        image: "https://assets.coingecko.com/coins/images/14375/large/alice_logo.jpg?1615782968"
     },
     {
         name: "Illuvium",
         id: "illuvium",
-        ticker: "ILV"
-    },
-    {
-        name: "CryptoBlades",
-        id: "crypto-blades",
-        ticker: "SKILL"
+        ticker: "ILV",
+        image: "https://assets.coingecko.com/coins/images/14468/large/ILV.JPG?1617182121"
     },
     {
         name: "Axie Infinity",
         id: "axie-infinity",
-        ticker: "AXS"
+        ticker: "AXS",
+        image: "https://assets.coingecko.com/coins/images/13029/large/axie_infinity_logo.png?1604471082"
     },
     {
         name: "Star Atlas",
         id: "star-atlas",
-        ticker: "ATLAS"
+        ticker: "ATLAS",
+        image: "https://assets.coingecko.com/coins/images/17659/large/Icon_Reverse.png?1628759092"
     },
     {
         name: "Town Star",
         id: "town-star",
-        ticker: "TOWN"
+        ticker: "TOWN",
+        image: "https://assets.coingecko.com/coins/images/19581/large/town.png?1635840875"
     },
     {
         name: "DeFi Kingdoms",
         id: "defi-kingdoms",
-        ticker: "JEWEL"
+        ticker: "JEWEL",
+        image: "https://assets.coingecko.com/coins/images/18570/large/fAisLIV.png?1632449282"
     },
     {
         name: "Wilder World",
         id: "wilder-world",
-        ticker: "WILD"
+        ticker: "WILD",
+        image: "https://assets.coingecko.com/coins/images/15407/large/WWLogo_Gradient_Cirlce.png?1620743969"
     },
     {
         name: "Atari",
         id: "atari",
-        ticker: "ATRI"
+        ticker: "ATRI",
+        image: "https://assets.coingecko.com/coins/images/12992/large/AtariLogoPS_200x200_%281%29.png?1643189483"
     },
     {
         name: "Engine Token",
         id: "engine-token",
-        ticker: "ENGN"
+        ticker: "ENGN",
+        image: "https://assets.coingecko.com/coins/images/20492/large/200x200_%2842%29.png?1637129962"
     },
     {
         name: "Vulcan Forged",
         id: "vulcan-forged",
-        ticker: "PYR"
+        ticker: "PYR",
+        image: "https://assets.coingecko.com/coins/images/14770/large/1617088937196.png?1619414736"
     },
     {
         name: "Ethermon",
         id: "ethermon",
-        ticker: "EMON"
+        ticker: "EMON",
+        image: "https://assets.coingecko.com/coins/images/15889/large/LtET0reH_400x400.jpg?1622213962"
     },
     {
         name: "REVV",
         id: "revv",
-        ticker: "REVV"
+        ticker: "REVV",
+        image: "https://assets.coingecko.com/coins/images/12373/large/REVV_TOKEN_Refined_2021_%281%29.png?1627652390"
     },
     {
         name: "Cornucopias",
         id: "cornucopias",
-        ticker: "COPI"
+        ticker: "COPI",
+        image: "https://assets.coingecko.com/coins/images/21452/large/g56WwJDA_400x400.jpg?1639174968"
     },
     {
         name: "My DeFi Pet",
         id: "my-defi-pet",
-        ticker: "DPET"
-    },
-    {
-        name: "Plants vs Undead",
-        id: "plants-vs-undead-token",
-        ticker: "PVU"
+        ticker: "DPET",
+        image: "https://assets.coingecko.com/coins/images/15321/large/mydefi.PNG?1620512455"
     },
     {
         name: "Metastrike",
         id: "metastrike",
-        ticker: "MTS"
+        ticker: "MTS",
+        image: "https://assets.coingecko.com/coins/images/22892/large/weD5ZQkc_400x400.jpg?1642832800"
     },
     {
         name: "MetaPets",
         id: "metapets",
-        ticker: "METAPETS"
+        ticker: "METAPETS",
+        image: "https://assets.coingecko.com/coins/images/20695/large/metapets.png?1639046327"
     },
     {
         name: "Guild of Guardians",
         id: "guild-of-guardians",
-        ticker: "GOG"
+        ticker: "GOG",
+        image: "https://assets.coingecko.com/coins/images/17362/large/V2QDNoLg_400x400.jpg?1640054187"
     },
     {
         name: "Aavegotchi",
         id: "aavegotchi",
-        ticker: "GHST"
+        ticker: "GHST",
+        image: "https://assets.coingecko.com/coins/images/12467/large/ghst_200.png?1600750321"
     }
 ]
 export async function getData() {

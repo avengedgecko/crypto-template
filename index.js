@@ -4,6 +4,25 @@ const axios = require('axios');
 //2. Initiate the CoinGecko API Client
 const CoinGeckoClient = new CoinGecko();
 
+
+//3. Make calls
+var logos = async() => {
+    let ids = tokenIds.map(x => x.id);
+
+    for (id of ids) {
+        try {
+            console.log("\n" + id)
+            let data = await axios.get(`https://api.coingecko.com/api/v3/coins/${id}`);
+            console.log(data.data.image.large)
+        } catch (e) {
+
+        }
+    //     console.log("\n")
+    }
+  //   console.log(coins)
+  };
+
+  
 //3. Make calls
 var func = async() => {
   let ids = tokenIds.map(x => x.id);
@@ -180,4 +199,4 @@ const tokenIds = [
         ticker: "GHST"
     }
 ];
-func().then()
+logos().then()
