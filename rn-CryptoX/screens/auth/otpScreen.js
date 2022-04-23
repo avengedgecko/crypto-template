@@ -132,7 +132,7 @@ function resendInfo() {
     return (
         <View style={styles.resendInfoContainerStyle}>
             <Text style={{ ...Fonts.gray15Medium }}>
-                Did'nt receive OTP Code!
+                Didn't receive OTP Code!
             </Text>
             <Text style={{ ...Fonts.black19Bold, marginLeft: Sizes.fixPadding }}>
                 Resend
@@ -154,7 +154,7 @@ function otpText() {
 
 function logo() {
     return (
-        <Image source={require('../../assets/images/auth-icon.png')}
+        <Image source={require('../../assets/images/ggLogo.png')}
             style={{ alignSelf: 'center', width: 150.0, height: 150.0, marginBottom: Sizes.fixPadding }}
             resizeMode="contain"
         />

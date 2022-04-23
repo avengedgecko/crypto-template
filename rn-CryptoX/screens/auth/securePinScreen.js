@@ -208,7 +208,7 @@ function enterPinInfo() {
 
 function logo() {
     return (
-        <Image source={require('../../assets/images/auth-icon.png')}
+        <Image source={require('../../assets/images/ggLogo.png')}
             style={styles.logoImageStyle}
             resizeMode="contain"
         />
