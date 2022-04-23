@@ -14,7 +14,10 @@ class SplashScreen extends Component {
                 <StatusBar translucent={false} backgroundColor={Colors.primaryColor} />
                 <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                     <Text style={{ ...Fonts.white40Bold }}>
-                        CryptoX
+                        GoodGains
+                    </Text>
+                    <Text style={{ ...Fonts.white40Bold }}>
+                        Exchange
                     </Text>
                     <CircleFade size={70} color={Colors.whiteColor}
                         style={{ position: 'absolute', bottom: 50.0 }}

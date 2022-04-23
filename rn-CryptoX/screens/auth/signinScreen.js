@@ -120,7 +120,7 @@ const Signin = ({ navigation }) => {
 
     function logo() {
         return (
-            <Image source={require('../../assets/images/auth-icon.png')}
+            <Image source={require('../../assets/images/ggLogo.png')}
                 style={{ alignSelf: 'center', width: 150.0, height: 150.0, marginBottom: Sizes.fixPadding }}
                 resizeMode="contain"
             />

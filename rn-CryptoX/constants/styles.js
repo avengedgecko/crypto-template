@@ -237,7 +237,7 @@ export const Fonts = {
 }
 
 export const Colors = {
-    primaryColor: '#4B6AFF',
+    primaryColor: '#a754e2',
     blackColor: '#000000',
     whiteColor: '#ffffff',
     backColor: '#F2F4F6',
