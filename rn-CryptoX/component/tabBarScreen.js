@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
     Text,
     View,
@@ -12,12 +12,13 @@ import {
 } from "react-native";
 import { TabView, TabBar } from 'react-native-tab-view';
 import { Fonts, Colors, Sizes } from "../constants/styles";
-import { AllData, WatchlistData, TopGainerData, TopLosersData } from "./statisticDataLists";
+import { AllData, WatchlistData, TopGainerData, TopLosersData, tokenIds } from "./statisticDataLists";
 import { AntDesign } from '@expo/vector-icons';
 import { SwipeListView } from 'react-native-swipe-list-view';
 import { Snackbar } from 'react-native-paper';
 import { MaterialIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
+import axios from 'axios';
 
 export default TabBarScreen = ({ navigation }) => {
 
@@ -30,13 +31,34 @@ export default TabBarScreen = ({ navigation }) => {
     ]);
 
     const layout = useWindowDimensions();
+    const [coinData, setCoinData] = useState([]);
+
+    useEffect(() => {
+        let ids = tokenIds.map(x => x.id)
+        axios
+        .get(`https://api.coingecko.com/api/v3/simple/price?ids=${ids.join()}&include_market_cap=true&include_24hr_change=true&vs_currencies=usd`)
+        .then(res => {
+            let coins = [];
+            for (key of Object.keys(res.data)) {
+              const obj = {
+                  name : tokenIds.find( x => x.id === key).name,
+                  ticker : tokenIds.find( x => x.id === key).ticker,
+                  id : key,
+                  usd : res.data[key].usd,
+                  change_24hr : res.data[key].usd_24h_change
+              }
+              coins.push(obj)
+            }
+            setCoinData(coins);
+        })
+    }, [])
 
     const renderScene = ({ route, jumpTo }) => {
         switch (route.key) {
             case 'first':
-                return <Currency data={AllData} navigation={navigation} />;
+                return <Currency data={coinData} navigation={navigation} />;
             case 'second':
-                return <WatchList navigation={navigation} />;
+                return <WatchList data={coinData} navigation={navigation} />;
             case 'third':
                 return <Currency data={TopGainerData} navigation={navigation} />;
             case 'forth':
@@ -78,7 +100,7 @@ Array(20)
         rowSwipeAnimatedValues[`${i}`] = new Animated.Value(0);
     });
 
-const WatchList = ({ navigation }) => {
+const WatchList = ({ coinData, navigation }) => {
 
     const [showSnackBar, setShowSnackBar] = useState(false);
 
@@ -90,7 +112,6 @@ const WatchList = ({ navigation }) => {
             rowMap[rowKey].closeRow();
         }
     };
-
     const deleteRow = (rowMap, rowKey) => {
         closeRow(rowMap, rowKey);
         const newData = [...listData];
@@ -144,7 +165,7 @@ const WatchList = ({ navigation }) => {
                     </View>
                     <View>
                         <Text style={{ ...Fonts.black16SemiBold }}>
-                            ${data.item.amount}
+                            1
                         </Text>
                     </View>
                 </View>
@@ -196,7 +217,7 @@ const WatchList = ({ navigation }) => {
             :
             <View style={styles.container}>
                 <SwipeListView
-                    data={listData}
+                    data={coinData}
                     renderItem={renderItem}
                     renderHiddenItem={renderHiddenItem}
                     rightOpenValue={-100}
@@ -227,31 +248,31 @@ const Currency = ({ data, navigation }) => {
         >
             <View style={styles.currencyInfoContainerStyle}>
                 <View style={{ flexDirection: 'row', alignItems: 'center', }}>
-                    <Image
-                        source={item.logo}
+                    {/* <Image
+                        source={{uri: item.image}}
                         style={{ height: 55.0, width: 55.0, borderRadius: 27.5 }}
                         resizeMode="contain"
-                    />
+                    /> */}
                     <View style={{ marginLeft: Sizes.fixPadding }}>
                         <Text style={{ ...Fonts.black16Medium }}>{item.name}</Text>
                         <View style={{ flexDirection: 'row', marginTop: Sizes.fixPadding - 5.0 }}>
                             <Text style={{ ...Fonts.blackMedium, marginRight: Sizes.fixPadding + 5.0 }}>
-                                {item.sortName}
+                                {item.ticker}
                             </Text>
                             <AntDesign
-                                name={item.isPositive == true ? "caretup" : "caretdown"} size={12}
-                                color={item.isPositive == true ? Colors.primaryColor : 'red'}
+                                name={item.change_24hr > 0 == true ? "caretup" : "caretdown"} size={12}
+                                color={item.change_24hr > 0 == true ? Colors.primaryColor : 'red'}
                                 style={{ marginTop: 3.0, marginRight: Sizes.fixPadding - 2.0 }}
                             />
                             <Text style={{ ...Fonts.blackMedium }}>
-                                {item.percentage}%
+                                {item.change_24hr}%
                             </Text>
                         </View>
                     </View>
                 </View>
                 <View>
                     <Text style={{ ...Fonts.black16SemiBold }}>
-                        ${item.amount}
+                        ${item.usd}
                     </Text>
                 </View>
             </View>
