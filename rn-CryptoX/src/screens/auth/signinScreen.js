@@ -82,7 +82,7 @@ const Signin = ({ navigation }) => {
         return (
             <View>
                 <View style={styles.loginWithFacebookButtonStyle}>
-                    <Image source={require('../../assets/images/facebook.png')}
+                    <Image source={require('../../../assets/images/facebook.png')}
                         style={{ height: 30.0, width: 30.0 }}
                         resizeMode="contain"
                     />
@@ -98,7 +98,7 @@ const Signin = ({ navigation }) => {
         return (
             <View>
                 <View style={styles.loginWithGoogleButtonStyle}>
-                    <Image source={require('../../assets/images/google.png')}
+                    <Image source={require('../../../assets/images/google.png')}
                         style={{ height: 30.0, width: 30.0 }}
                         resizeMode="contain"
                     />
@@ -112,15 +112,15 @@ const Signin = ({ navigation }) => {
 
     function sendOTPInfo() {
         return (
-            <Text style={{ ...Fonts.black15Medium, alignSelf: 'center', marginTop: Sizes.fixPadding }}>
-                We'll send otp for verification
+            <Text style={{ ...Fonts.white15Medium, alignSelf: 'center', marginTop: Sizes.fixPadding }}>
+                Get Ready for the Verification Code
             </Text>
         )
     }
 
     function logo() {
         return (
-            <Image source={require('../../assets/images/ggLogo.png')}
+            <Image source={require('../../../assets/images/ggLogo.png')}
                 style={{ alignSelf: 'center', width: 150.0, height: 150.0, marginBottom: Sizes.fixPadding }}
                 resizeMode="contain"
             />
@@ -129,8 +129,8 @@ const Signin = ({ navigation }) => {
 
     function signInText() {
         return (
-            <Text style={{ ...Fonts.gray16Bold, alignSelf: 'center', marginVertical: Sizes.fixPadding + 5.0 }}>
-                Signin with phone number
+            <Text style={{ ...Fonts.white16SemiBold, alignSelf: 'center', marginVertical: Sizes.fixPadding + 5.0 }}>
+                Sign in with your phone number
             </Text>
         )
     }

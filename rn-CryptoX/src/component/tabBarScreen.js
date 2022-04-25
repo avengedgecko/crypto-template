@@ -72,18 +72,18 @@ export default TabBarScreen = ({ navigation }) => {
             navigationState={{ index, routes }}
             renderScene={renderScene}
             onIndexChange={setIndex}
-            swipeEnabled={false}
+            swipeEnabled={true}
             renderTabBar={props => (
                 <TabBar
                     {...props}
-                    indicatorStyle={{ backgroundColor: '#2497F3', }}
+                    indicatorStyle={{ backgroundColor: Colors.primaryColor, }}
                     tabStyle={{
                         width: layout.width / 4.3,
                     }}
                     scrollEnabled={true}
-                    style={{ backgroundColor: 'white', }}
+                    style={{ backgroundColor: '#212121', }}
                     renderLabel={({ route, focused, color }) => (
-                        <Text style={{ ...Fonts.gray12Medium }}>
+                        <Text style={{ ...Fonts.white13Medium }}>
                             {route.title}
                         </Text>
                     )}

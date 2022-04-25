@@ -12,7 +12,8 @@ class HomeScreen extends Component {
             activeOpacity={0.9}
             style={{
                 paddingHorizontal: Sizes.fixPadding * 2.0,
-                marginVertical: Sizes.fixPadding
+                marginVertical: Sizes.fixPadding,
+                backgroundColor: '#212121'
             }}
             onPress={() => this.props.navigation.push('Currency')}
         >
@@ -24,24 +25,24 @@ class HomeScreen extends Component {
                         resizeMode="contain"
                     />
                     <View style={{ marginLeft: Sizes.fixPadding }}>
-                        <Text style={{ ...Fonts.black16Medium }}>{item.name}</Text>
+                        <Text style={{ ...Fonts.white16Medium }}>{item.name}</Text>
                         <View style={{ flexDirection: 'row', marginTop: Sizes.fixPadding - 5.0 }}>
-                            <Text style={{ ...Fonts.blackMedium, marginRight: Sizes.fixPadding + 5.0 }}>
+                            <Text style={{ ...Fonts.white16SemiBold, marginRight: Sizes.fixPadding + 5.0 }}>
                                 {item.sortName}
                             </Text>
                             <AntDesign
                                 name={item.isPositive == true ? "caretup" : "caretdown"} size={12}
-                                color={item.isPositive == true ? Colors.primaryColor : 'red'}
+                                color={item.isPositive == true ? Colors.greenColor : Colors.redColor}
                                 style={{ marginTop: 3.0, marginRight: Sizes.fixPadding - 2.0 }}
                             />
-                            <Text style={{ ...Fonts.blackMedium }}>
+                            <Text style={{ ...Fonts.white16Medium }}>
                                 {item.percentage}%
                             </Text>
                         </View>
                     </View>
                 </View>
                 <View>
-                    <Text style={{ ...Fonts.black16SemiBold }}>
+                    <Text style={{ ...Fonts.white16SemiBold }}>
                         ${item.amount}
                     </Text>
                 </View>
@@ -51,8 +52,8 @@ class HomeScreen extends Component {
 
     render() {
         return (
-            <SafeAreaView style={{}}>
-                <StatusBar translucent={false} backgroundColor={Colors.primaryColor} />
+            <SafeAreaView style={{backgroundColor: '#212121'}}>
+                <StatusBar translucent={false} backgroundColor={Colors.backColor} />
                 <FlatList
                     ListHeaderComponent={
                         <>
@@ -68,7 +69,7 @@ class HomeScreen extends Component {
                     renderItem={this.renderItem}
                     keyExtractor={(item) => `${item.id}`}
                     showsVerticalScrollIndicator={false}
-                    contentContainerStyle={{ paddingBottom: Sizes.fixPadding * 7.0 }}
+                    contentContainerStyle={{ paddingBottom: Sizes.fixPadding * 7.0, backgroundColor: '#212121' }}
                 />
             </SafeAreaView>
         )
@@ -78,11 +79,12 @@ class HomeScreen extends Component {
         return (
             <View style={{
                 flexDirection: 'row', justifyContent: 'space-between',
-                marginHorizontal: Sizes.fixPadding * 2.0,
-                marginTop: Sizes.fixPadding - 5.0,
-                marginBottom: Sizes.fixPadding,
+                paddingHorizontal: 20,
+                paddingTop: 25,
+                paddingBottom: 10,
+                backgroundColor: '#212121'
             }}>
-                <Text style={{ ...Fonts.black19SemiBold }}>Popular Currencies</Text>
+                <Text style={{ ...Fonts.white20SemiBold }}>Popular Currencies</Text>
                 <TouchableOpacity
                     activeOpacity={0.9}
                     onPress={() => this.props.navigation.push('BottomTabScreen', { index: 2 })}
@@ -96,11 +98,11 @@ class HomeScreen extends Component {
 
     userWelcome() {
         return (
-            <View style={{ paddingHorizontal: Sizes.fixPadding * 2.0, }}>
+            <View style={{ paddingHorizontal: Sizes.fixPadding * 2.0, backgroundColor: '#212121' }}>
                 <View style={styles.userWelcomeContainerStyle}>
                     <View>
-                        <Text style={{ ...Fonts.gray17Medium, }}>Welcome</Text>
-                        <Text style={{ ...Fonts.black22Bold, marginTop: Sizes.fixPadding - 5.0, }}>
+                        <Text style={{ ...Fonts.white17SemiBold, }}>Welcome</Text>
+                        <Text style={{ ...Fonts.white25Bold, marginTop: Sizes.fixPadding - 5.0, }}>
                             Peter Jones
                         </Text>
                     </View>
@@ -108,7 +110,7 @@ class HomeScreen extends Component {
                         activeOpacity={0.9}
                         onPress={() => this.props.navigation.push('BottomTabScreen', { index: 4 })}
                     >
-                        <Image source={require('../../assets/images/user/user_14.jpg')}
+                        <Image source={require('../../../assets/images/user/user_14.jpg')}
                             style={{ height: 60.0, width: 60.0, borderRadius: 15.0 }}
                         />
                     </TouchableOpacity>
@@ -121,16 +123,16 @@ class HomeScreen extends Component {
 const popularCurrenciesList = [
     {
         id: '1',
-        logo: require('../../assets/images/crypto_icon/btc.png'),
+        logo: require('../../../assets/images/crypto_icon/btc.png'),
         name: 'Bitcoin',
         sortName: 'BTC',
         isPositive: true,
         percentage: 4.72,
-        amount: '10,136.73'
+        amount: 10136.73
     },
     {
         id: '2',
-        logo: require('../../assets/images/crypto_icon/eth.png'),
+        logo: require('../../../assets/images/crypto_icon/eth.png'),
         name: 'Ethereum',
         sortName: 'ETH',
         isPositive: true,
@@ -139,7 +141,7 @@ const popularCurrenciesList = [
     },
     {
         id: '3',
-        logo: require('../../assets/images/crypto_icon/xrp.png'),
+        logo: require('../../../assets/images/crypto_icon/xrp.png'),
         name: 'XRP',
         sortName: 'XRP',
         isPositive: false,
@@ -148,7 +150,7 @@ const popularCurrenciesList = [
     },
     {
         id: '4',
-        logo: require('../../assets/images/crypto_icon/bch.png'),
+        logo: require('../../../assets/images/crypto_icon/bch.png'),
         name: 'Bitcoin Cash',
         sortName: 'BCH',
         isPositive: true,
@@ -157,7 +159,7 @@ const popularCurrenciesList = [
     },
     {
         id: '5',
-        logo: require('../../assets/images/crypto_icon/ltc.png'),
+        logo: require('../../../assets/images/crypto_icon/ltc.png'),
         name: 'Litecoin',
         sortName: 'LTC',
         isPositive: true,
@@ -169,9 +171,10 @@ const popularCurrenciesList = [
 function myPortfolioTitle() {
     return (
         <Text style={{
-            ...Fonts.black19SemiBold,
-            marginHorizontal: Sizes.fixPadding * 2.0,
-            marginTop: Sizes.fixPadding + 5.0,
+            ...Fonts.white20SemiBold,
+            paddingHorizontal: 20,
+            paddingTop: 20,
+            backgroundColor: '#212121'
 
         }}>
             My Portfolio
@@ -183,20 +186,21 @@ function balanceAndProfitInfo() {
     return (
         <View style={{
             paddingHorizontal: Sizes.fixPadding * 2.0,
-            marginTop: 20.0,
+            paddingTop: 20.0,
+            backgroundColor: '#212121'
         }}>
             <View style={styles.balanceAndProfitInfoContainerStyle}>
-                <Text style={{ ...Fonts.white16Medium }}>Balance</Text>
-                <Text style={{ ...Fonts.white30Bold, marginVertical: Sizes.fixPadding }}>$4,50,933</Text>
-                <Text style={{ ...Fonts.white16Medium, marginBottom: Sizes.fixPadding, marginTop: Sizes.fixPadding + 5.0 }}>
+                <Text style={{ ...Fonts.white17SemiBold }}>Balance</Text>
+                <Text style={{ ...Fonts.white30Bold, marginVertical: Sizes.fixPadding }}>$4,506,933</Text>
+                <Text style={{ ...Fonts.white17SemiBold, marginBottom: Sizes.fixPadding, marginTop: Sizes.fixPadding + 5.0 }}>
                     Monthly Profit
                 </Text>
-                <Text style={{ ...Fonts.white25Bold }}>$12,484</Text>
+                <Text style={{ ...Fonts.white25Bold }}>$87,582</Text>
             </View>
             <View style={{ position: 'absolute', right: 40.0, bottom: 20.0, }}>
                 <View style={styles.balanceAndProfitPercentageInfoStyle}>
                     <AntDesign name="caretup" size={12} color={Colors.whiteColor} />
-                    <Text style={{ ...Fonts.whiteSemiBold, marginLeft: 7.0 }}>+10%</Text>
+                    <Text style={{ ...Fonts.white20SemiBold, marginLeft: 7.0 }}>+9.99%</Text>
                 </View>
             </View>
         </View>
@@ -206,17 +210,17 @@ function balanceAndProfitInfo() {
 const portfolioList = [
     {
         id: '1',
-        image: require('../../assets/images/crypto_icon/btc.png'),
+        image: require('../../../assets/images/crypto_icon/btc.png'),
         name: 'BTC',
-        amount: '1,45,250',
+        amount: '452,500',
         isPositive: true,
         percentage: 20,
     },
     {
         id: '2',
-        image: require('../../assets/images/crypto_icon/eth.png'),
+        image: require('../../../assets/images/crypto_icon/eth.png'),
         name: 'ETH',
-        amount: '2,50,245',
+        amount: '2,572,245',
         isPositive: false,
         percentage: 3,
     },
@@ -232,12 +236,12 @@ function portfolioInfo() {
                     style={{ height: 60.0, width: 60.0, borderRadius: 30.0 }}
                     resizeMode="contain"
                 />
-                <Text style={{ marginLeft: Sizes.fixPadding, ...Fonts.black17Medium }}>{item.name}</Text>
+                <Text style={{ marginLeft: Sizes.fixPadding, ...Fonts.white20SemiBold }}>{item.name}</Text>
             </View>
             <View>
-                <Text style={{ ...Fonts.gray17Medium, marginBottom: Sizes.fixPadding - 3.0 }}>Portfolio</Text>
+                <Text style={{ ...Fonts.white16Medium, marginBottom: Sizes.fixPadding - 3.0 }}>Portfolio</Text>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                    <Text style={{ ...Fonts.black22Bold }}>
+                    <Text style={{ ...Fonts.white25Bold }}>
                         {`$${item.amount}`}
                     </Text>
                     <View style={{ flexDirection: 'row', alignItems: 'center', }}>
@@ -248,7 +252,7 @@ function portfolioInfo() {
                         }
                         {
                             item.isPositive == true ?
-                                <Text style={{ ...Fonts.primaryColor17Medium, marginLeft: Sizes.fixPadding - 3.0 }}>
+                                <Text style={{ ...Fonts.primaryColor17SemiBold, marginLeft: Sizes.fixPadding - 3.0 }}>
                                     {`+${item.percentage}%`}
                                 </Text> :
                                 <Text style={{ ...Fonts.red17Medium, marginLeft: Sizes.fixPadding - 3.0 }}>
@@ -274,19 +278,21 @@ function portfolioInfo() {
 }
 
 const styles = StyleSheet.create({
+
     userWelcomeContainerStyle: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginTop: Sizes.fixPadding * 2.0,
+        paddingTop: 0,
     },
     popularCurrenciesContainerStyle: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        backgroundColor: 'white', elevation: 2.0,
+        backgroundColor: '#313131', elevation: 2.0,
         borderRadius: Sizes.fixPadding * 2.0,
         alignItems: 'center',
         paddingHorizontal: Sizes.fixPadding,
         paddingVertical: Sizes.fixPadding,
+
     },
     balanceAndProfitInfoContainerStyle: {
         backgroundColor: Colors.primaryColor,
@@ -296,7 +302,7 @@ const styles = StyleSheet.create({
     },
     balanceAndProfitPercentageInfoStyle: {
         flexDirection: 'row',
-        backgroundColor: "rgba(255,255,255,0.22)",
+        backgroundColor: 'rgba(255,255,255,0.25)',
         alignItems: 'center',
         paddingHorizontal: 12.0,
         paddingVertical: 12.0,
@@ -306,7 +312,7 @@ const styles = StyleSheet.create({
         height: 170.0,
         width: 230.0,
         justifyContent: 'space-between',
-        backgroundColor: 'white',
+        backgroundColor: '#313131',
         marginHorizontal: 10.0,
         marginVertical: 15.0,
         paddingHorizontal: 10.0,

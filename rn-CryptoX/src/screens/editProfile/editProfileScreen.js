@@ -160,7 +160,7 @@ class EditProfileScreen extends Component {
         return (
             <View style={{ alignItems: 'center', marginTop: Sizes.fixPadding * 2.5 }}>
                 <Image
-                    source={require('../../assets/images/user/user_14.jpg')}
+                    source={require('../../../assets/images/user/user_14.jpg')}
                     style={{ height: 130.0, width: 130.0, borderRadius: 65.0, }}
                     resizeMode="contain"
                 />

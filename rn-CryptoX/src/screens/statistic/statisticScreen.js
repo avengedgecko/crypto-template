@@ -10,19 +10,20 @@ class StatisticScreen extends Component {
 
     render() {
         return (
-            <SafeAreaView style={{ flex: 1 }}>
+            <SafeAreaView style={{ flex: 1, backgroundColor: '#212121'}}>
                 <StatusBar translucent={false} backgroundColor={Colors.primaryColor} />
                 <View style={{
                     flexDirection: 'row',
                     justifyContent: 'space-between',
                     paddingHorizontal: Sizes.fixPadding * 2.0,
                     paddingVertical: Sizes.fixPadding,
-                    alignItems: 'center', backgroundColor: 'white'
+                    alignItems: 'center',
+                    backgroundColor: '#212121'
                 }}>
-                    <Text style={{ fontSize: 16.0, color: '#006400', fontFamily: 'Montserrat_Bold' }}>
-                        Market is up 3.68% today
+                    <Text style={{ fontSize: 16.0, color: '#00b900', fontFamily: 'Montserrat_Bold' }}>
+                        Market is up 14.68% today
                     </Text>
-                    <Ionicons name="search-sharp" size={24} color={Colors.primaryColor} />
+                    <Ionicons name="search-sharp" size={24} color={Colors.whiteColor} />
                 </View>
 
                 <TabBarScreen navigation={this.props.navigation} />

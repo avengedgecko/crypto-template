@@ -180,7 +180,7 @@ export async function getData() {
 export const AllData = [
     {
         id: '1',
-        logo: require('../assets/images/crypto_icon/btc.png'),
+        logo: require('../../assets/images/crypto_icon/btc.png'),
         name: 'Bitcoin',
         sortName: 'BTC',
         isPositive: true,
@@ -189,7 +189,7 @@ export const AllData = [
     },
     {
         id: '2',
-        logo: require('../assets/images/crypto_icon/eth.png'),
+        logo: require('../../assets/images/crypto_icon/eth.png'),
         name: 'Ethereum',
         sortName: 'ETH',
         isPositive: true,
@@ -198,7 +198,7 @@ export const AllData = [
     },
     {
         id: '3',
-        logo: require('../assets/images/crypto_icon/xrp.png'),
+        logo: require('../../assets/images/crypto_icon/xrp.png'),
         name: 'XRP',
         sortName: 'XRP',
         isPositive: false,
@@ -207,7 +207,7 @@ export const AllData = [
     },
     {
         id: '4',
-        logo: require('../assets/images/crypto_icon/bch.png'),
+        logo: require('../../assets/images/crypto_icon/bch.png'),
         name: 'Bitcoin Cash',
         sortName: 'BCH',
         isPositive: true,
@@ -216,7 +216,7 @@ export const AllData = [
     },
     {
         id: '5',
-        logo: require('../assets/images/crypto_icon/ltc.png'),
+        logo: require('../../assets/images/crypto_icon/ltc.png'),
         name: 'Litecoin',
         sortName: 'LTC',
         isPositive: true,
@@ -225,7 +225,7 @@ export const AllData = [
     },
     {
         id: '6',
-        logo: require('../assets/images/crypto_icon/bnb.png'),
+        logo: require('../../assets/images/crypto_icon/bnb.png'),
         name: 'Binance Coin',
         sortName: 'BNB',
         isPositive: false,
@@ -234,7 +234,7 @@ export const AllData = [
     },
     {
         id: '7',
-        logo: require('../assets/images/crypto_icon/eos.png'),
+        logo: require('../../assets/images/crypto_icon/eos.png'),
         name: 'EOS',
         sortName: 'EOS',
         isPositive: false,
@@ -243,7 +243,7 @@ export const AllData = [
     },
     {
         id: '8',
-        logo: require('../assets/images/crypto_icon/xmr.png'),
+        logo: require('../../assets/images/crypto_icon/xmr.png'),
         name: 'Monero',
         sortName: 'XMR',
         isPositive: true,
@@ -252,7 +252,7 @@ export const AllData = [
     },
     {
         id: '9',
-        logo: require('../assets/images/crypto_icon/usdt.png'),
+        logo: require('../../assets/images/crypto_icon/usdt.png'),
         name: 'Tether',
         sortName: 'USDT',
         isPositive: true,
@@ -264,7 +264,7 @@ export const AllData = [
 export const WatchlistData = [
     {
         key: '1',
-        logo: require('../assets/images/crypto_icon/eth.png'),
+        logo: require('../../assets/images/crypto_icon/eth.png'),
         name: 'Ethereum',
         sortName: 'ETH',
         isPositive: true,
@@ -273,7 +273,7 @@ export const WatchlistData = [
     },
     {
         key: '2',
-        logo: require('../assets/images/crypto_icon/xrp.png'),
+        logo: require('../../assets/images/crypto_icon/xrp.png'),
         name: 'XRP',
         sortName: 'XRP',
         isPositive: false,
@@ -282,7 +282,7 @@ export const WatchlistData = [
     },
     {
         key: '3',
-        logo: require('../assets/images/crypto_icon/bch.png'),
+        logo: require('../../assets/images/crypto_icon/bch.png'),
         name: 'Bitcoin Cash',
         sortName: 'BCH',
         isPositive: true,
@@ -294,7 +294,7 @@ export const WatchlistData = [
 export const TopGainerData = [
     {
         id: '1',
-        logo: require('../assets/images/crypto_icon/xrp.png'),
+        logo: require('../../assets/images/crypto_icon/xrp.png'),
         name: 'XRP',
         sortName: 'XRP',
         isPositive: false,
@@ -303,7 +303,7 @@ export const TopGainerData = [
     },
     {
         id: '2',
-        logo: require('../assets/images/crypto_icon/ltc.png'),
+        logo: require('../../assets/images/crypto_icon/ltc.png'),
         name: 'Litecoin',
         sortName: 'LTC',
         isPositive: true,
@@ -312,7 +312,7 @@ export const TopGainerData = [
     },
     {
         id: '3',
-        logo: require('../assets/images/crypto_icon/btc.png'),
+        logo: require('../../assets/images/crypto_icon/btc.png'),
         name: 'Bitcoin',
         sortName: 'BTC',
         isPositive: true,
@@ -321,7 +321,7 @@ export const TopGainerData = [
     },
     {
         id: '4',
-        logo: require('../assets/images/crypto_icon/eth.png'),
+        logo: require('../../assets/images/crypto_icon/eth.png'),
         name: 'Ethereum',
         sortName: 'ETH',
         isPositive: true,
@@ -330,7 +330,7 @@ export const TopGainerData = [
     },
     {
         id: '5',
-        logo: require('../assets/images/crypto_icon/bch.png'),
+        logo: require('../../assets/images/crypto_icon/bch.png'),
         name: 'Bitcoin Cash',
         sortName: 'BCH',
         isPositive: true,
@@ -339,7 +339,7 @@ export const TopGainerData = [
     },
     {
         id: '6',
-        logo: require('../assets/images/crypto_icon/bnb.png'),
+        logo: require('../../assets/images/crypto_icon/bnb.png'),
         name: 'Binance Coin',
         sortName: 'BNB',
         isPositive: false,
@@ -348,7 +348,7 @@ export const TopGainerData = [
     },
     {
         id: '7',
-        logo: require('../assets/images/crypto_icon/eos.png'),
+        logo: require('../../assets/images/crypto_icon/eos.png'),
         name: 'EOS',
         sortName: 'EOS',
         isPositive: false,
@@ -357,7 +357,7 @@ export const TopGainerData = [
     },
     {
         id: '8',
-        logo: require('../assets/images/crypto_icon/xmr.png'),
+        logo: require('../../assets/images/crypto_icon/xmr.png'),
         name: 'Monero',
         sortName: 'XMR',
         isPositive: true,
@@ -366,7 +366,7 @@ export const TopGainerData = [
     },
     {
         id: '9',
-        logo: require('../assets/images/crypto_icon/usdt.png'),
+        logo: require('../../assets/images/crypto_icon/usdt.png'),
         name: 'Tether',
         sortName: 'USDT',
         isPositive: true,
@@ -378,7 +378,7 @@ export const TopGainerData = [
 export const TopLosersData = [
     {
         id: '1',
-        logo: require('../assets/images/crypto_icon/xrp.png'),
+        logo: require('../../assets/images/crypto_icon/xrp.png'),
         name: 'XRP',
         sortName: 'XRP',
         isPositive: false,
@@ -387,7 +387,7 @@ export const TopLosersData = [
     },
     {
         id: '2',
-        logo: require('../assets/images/crypto_icon/ltc.png'),
+        logo: require('../../assets/images/crypto_icon/ltc.png'),
         name: 'Litecoin',
         sortName: 'LTC',
         isPositive: true,
@@ -396,7 +396,7 @@ export const TopLosersData = [
     },
     {
         id: '3',
-        logo: require('../assets/images/crypto_icon/btc.png'),
+        logo: require('../../assets/images/crypto_icon/btc.png'),
         name: 'Bitcoin',
         sortName: 'BTC',
         isPositive: true,
@@ -405,7 +405,7 @@ export const TopLosersData = [
     },
     {
         id: '4',
-        logo: require('../assets/images/crypto_icon/eth.png'),
+        logo: require('../../assets/images/crypto_icon/eth.png'),
         name: 'Ethereum',
         sortName: 'ETH',
         isPositive: true,
@@ -414,7 +414,7 @@ export const TopLosersData = [
     },
     {
         id: '5',
-        logo: require('../assets/images/crypto_icon/bch.png'),
+        logo: require('../../assets/images/crypto_icon/bch.png'),
         name: 'Bitcoin Cash',
         sortName: 'BCH',
         isPositive: true,
@@ -423,7 +423,7 @@ export const TopLosersData = [
     },
     {
         id: '6',
-        logo: require('../assets/images/crypto_icon/bnb.png'),
+        logo: require('../../assets/images/crypto_icon/bnb.png'),
         name: 'Binance Coin',
         sortName: 'BNB',
         isPositive: false,
@@ -432,7 +432,7 @@ export const TopLosersData = [
     },
     {
         id: '7',
-        logo: require('../assets/images/crypto_icon/eos.png'),
+        logo: require('../../assets/images/crypto_icon/eos.png'),
         name: 'EOS',
         sortName: 'EOS',
         isPositive: false,
@@ -441,7 +441,7 @@ export const TopLosersData = [
     },
     {
         id: '8',
-        logo: require('../assets/images/crypto_icon/xmr.png'),
+        logo: require('../../assets/images/crypto_icon/xmr.png'),
         name: 'Monero',
         sortName: 'XMR',
         isPositive: true,
@@ -450,7 +450,7 @@ export const TopLosersData = [
     },
     {
         id: '9',
-        logo: require('../assets/images/crypto_icon/usdt.png'),
+        logo: require('../../assets/images/crypto_icon/usdt.png'),
         name: 'Tether',
         sortName: 'USDT',
         isPositive: true,

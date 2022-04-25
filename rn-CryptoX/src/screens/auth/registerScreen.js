@@ -24,7 +24,7 @@ class RegisterScreen extends Component {
             <SafeAreaView style={{ flex: 1, backgroundColor: Colors.backColor }}>
                 <StatusBar translucent={false} backgroundColor={Colors.primaryColor} />
                 <View style={{ flex: 1, justifyContent: 'center' }}>
-                    <Feather name="arrow-left" size={25} color="black"
+                    <Feather name="arrow-left" size={25} color="white"
                         style={{ position: 'absolute', left: 15.0, top: 20.0 }}
                     />
                     {logo()}
@@ -103,7 +103,7 @@ function userNameTextField() {
 
 function registerText() {
     return (
-        <Text style={{ ...Fonts.gray16Bold, alignSelf: 'center', marginTop: Sizes.fixPadding + 5.0 }}>
+        <Text style={{ ...Fonts.white16SemiBold, alignSelf: 'center', marginTop: Sizes.fixPadding + 5.0 }}>
             Register your account
         </Text>
     )
@@ -111,7 +111,7 @@ function registerText() {
 
 function logo() {
     return (
-        <Image source={require('../../assets/images/ggLogo.png')}
+        <Image source={require('../../../assets/images/ggLogo.png')}
             style={{ alignSelf: 'center', width: 150.0, height: 150.0, marginBottom: Sizes.fixPadding }}
             resizeMode="contain"
         />

@@ -47,17 +47,17 @@ export default class CurrencyScreen extends Component {
                     {portfolioInfo()}
                     {this.aboutCurrenyTitle()}
                     {aboutCurrencyDetail({
-                        icon: require('../../assets/images/icon/rank.png'),
+                        icon: require('../../../assets/images/icon/rank.png'),
                         title: 'Market Rank',
                         value: '#1',
                     })}
                     {aboutCurrencyDetail({
-                        icon: require('../../assets/images/icon/market-cap.png'),
+                        icon: require('../../../assets/images/icon/market-cap.png'),
                         title: 'Market Cap',
                         value: '$75535.74 Cr.',
                     })}
                     {aboutCurrencyDetail({
-                        icon: require('../../assets/images/icon/supply.png'),
+                        icon: require('../../../assets/images/icon/supply.png'),
                         title: 'Circulating Supply',
                         value: `2 Cr. BTC`
                     })}
@@ -116,7 +116,7 @@ export default class CurrencyScreen extends Component {
         return (
             <View style={styles.currencyInfoContainerStyle}>
                 <View style={styles.currencyLogoContainerStyle}>
-                    <Image source={require('../../assets/images/crypto_icon/btc.png')}
+                    <Image source={require('../../../assets/images/crypto_icon/btc.png')}
                         style={{ height: 40.0, width: 40.0 }}
                         resizeMode="contain"
                     />

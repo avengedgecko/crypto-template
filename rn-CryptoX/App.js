@@ -1,23 +1,23 @@
 import React from "react";
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
-import BottomTabBarScreen from "./component/bottomTabBarScreen";
-import LoadingScreen from "./component/loadingScreen";
-import TotalBalanceScreen from "./screens/balance/totalBalanceScreen";
-import CurrencyScreen from "./screens/currency/currencyScreen";
-import DepositScreen from "./screens/deposit/depositScreen";
-import SuccessScreen from "./screens/success/successScreen";
-import WithdrawScreen from "./screens/withdraw/withdrawScreen";
-import WrongScreen from "./screens/wrong/wrongScreen";
-import EditProfileScreen from "./screens/editProfile/editProfileScreen";
-import BankDetailScreen from "./screens/bankDetail/bankDetailScreen";
-import SupportScreen from "./screens/support/supportScreen";
-import PrivacyPolicyScreen from "./screens/privacyPolicy/privacyPolicyScreen";
-import SigninScreen from "./screens/auth/signinScreen";
-import RegisterScreen from "./screens/auth/registerScreen";
-import OTPScreen from "./screens/auth/otpScreen";
-import SecurePinScreen from "./screens/auth/securePinScreen";
-import SplashScreen from "./screens/splashScreen";
+import BottomTabBarScreen from "./src/component/bottomTabBarScreen";
+import LoadingScreen from "./src/component/loadingScreen";
+import TotalBalanceScreen from "./src/screens/balance/totalBalanceScreen";
+import CurrencyScreen from "./src/screens/currency/currencyScreen";
+import DepositScreen from "./src/screens/deposit/depositScreen";
+import SuccessScreen from "./src/screens/success/successScreen";
+import WithdrawScreen from "./src/screens/withdraw/withdrawScreen";
+import WrongScreen from "./src/screens/wrong/wrongScreen";
+import EditProfileScreen from "./src/screens/editProfile/editProfileScreen";
+import BankDetailScreen from "./src/screens/bankDetail/bankDetailScreen";
+import SupportScreen from "./src/screens/support/supportScreen";
+import PrivacyPolicyScreen from "./src/screens/privacyPolicy/privacyPolicyScreen";
+import SigninScreen from "./src/screens/auth/signinScreen";
+import RegisterScreen from "./src/screens/auth/registerScreen";
+import OTPScreen from "./src/screens/auth/otpScreen";
+import SecurePinScreen from "./src/screens/auth/securePinScreen";
+import SplashScreen from "./src/screens/splashScreen";
 
 const switchNavigator = createSwitchNavigator({
   Loading: LoadingScreen,

@@ -30,8 +30,8 @@ class BankDetailScreen extends Component {
 
     render() {
         return (
-            <SafeAreaView style={{ flex: 1, backgroundColor: Colors.backColor }}>
-                <StatusBar translucent={false} backgroundColor={Colors.primaryColor} />
+            <SafeAreaView style={{ flex: 1, backgroundColor: '#212121' }}>
+                <StatusBar translucent={false} backgroundColor={Colors.backColor} />
                 <View>
                     <ScrollView>
                         {congratulationsInfo()}

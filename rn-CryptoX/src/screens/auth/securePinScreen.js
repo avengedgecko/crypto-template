@@ -40,7 +40,7 @@ class SecurePinScreen extends Component {
                     {this.pinBoxes()}
                     {this.state.pinCount < 4 ?
                         forgotPINText() : < ActivityIndicator
-                            color={Colors.primaryColor}
+                            color={Colors.whiteColor}
                             style={{ marginTop: Sizes.fixPadding * 3.0 }} />
                     }
                     {this.keyBoardDesign()}
@@ -58,12 +58,12 @@ class SecurePinScreen extends Component {
                             this.state.pinCount == 2 ||
                             this.state.pinCount == 3 ||
                             this.state.pinCount == 4
-                            && this.state.pinCount != 0 ? Colors.blackColor : Colors.whiteColor,
+                            && this.state.pinCount != 0 ? Colors.primaryColor : Colors.whiteColor,
                     borderColor:
                         this.state.pinCount == 1 ||
                             this.state.pinCount == 2 ||
                             this.state.pinCount == 3 ||
-                            this.state.pinCount == 4 ? Colors.blackColor : 'gray',
+                            this.state.pinCount == 4 ? Colors.primaryColor : 'gray',
                     ...styles.pinBoxContainerStyle
                 }}>
                 </View>
@@ -72,11 +72,11 @@ class SecurePinScreen extends Component {
                         this.state.pinCount == 2 ||
                             this.state.pinCount == 3 ||
                             this.state.pinCount == 4
-                            && this.state.pinCount != 0 ? Colors.blackColor : Colors.whiteColor,
+                            && this.state.pinCount != 0 ? Colors.primaryColor : Colors.whiteColor,
                     borderColor:
                         this.state.pinCount == 2 ||
                             this.state.pinCount == 3 ||
-                            this.state.pinCount == 4 ? Colors.blackColor : 'gray',
+                            this.state.pinCount == 4 ? Colors.primaryColor : 'gray',
                     ...styles.pinBoxContainerStyle
                 }}>
                 </View>
@@ -84,18 +84,18 @@ class SecurePinScreen extends Component {
                     backgroundColor:
                         this.state.pinCount == 3 ||
                             this.state.pinCount == 4
-                            && this.state.pinCount != 0 ? Colors.blackColor : Colors.whiteColor,
+                            && this.state.pinCount != 0 ? Colors.primaryColor : Colors.whiteColor,
                     borderColor:
                         this.state.pinCount == 3 ||
-                            this.state.pinCount == 4 ? Colors.blackColor : 'gray',
+                            this.state.pinCount == 4 ? Colors.primaryColor : 'gray',
                     ...styles.pinBoxContainerStyle
                 }}>
                 </View>
                 <View style={{
                     backgroundColor:
                         this.state.pinCount == 4
-                            && this.state.pinCount != 0 ? Colors.blackColor : Colors.whiteColor,
-                    borderColor: this.state.pinCount == 4 ? Colors.blackColor : 'gray',
+                            && this.state.pinCount != 0 ? Colors.primaryColor : Colors.whiteColor,
+                    borderColor: this.state.pinCount == 4 ? Colors.primaryColor : 'gray',
                     ...styles.pinBoxContainerStyle,
                 }}>
                 </View>
@@ -117,7 +117,7 @@ class SecurePinScreen extends Component {
                 }}
                 style={styles.keyboardItemContainerStyle}>
                 {item.id == 12 ?
-                    item.data : <Text style={{ ...Fonts.black17SemiBold }}>{item.data}</Text>
+                    item.data : <Text style={{ ...Fonts.white17Bold }}>{item.data}</Text>
                 }
             </TouchableOpacity>
         )
@@ -158,8 +158,8 @@ const keyboardItemsList = [
         data: 5,
     },
     {
-        id: '4',
-        data: 4,
+        id: '6',
+        data: 6,
     },
     {
         id: '7',
@@ -183,13 +183,13 @@ const keyboardItemsList = [
     },
     {
         id: '12',
-        data: <Ionicons name="backspace" size={24} color="black" />,
+        data: <Ionicons name="backspace" size={24} color="white" />,
     },
 ];
 
 function forgotPINText() {
     return (
-        <Text style={{ ...Fonts.primaryColor15Medium, marginTop: Sizes.fixPadding * 2.0, alignSelf: 'center' }}>
+        <Text style={{ ...Fonts.white15Medium, marginTop: Sizes.fixPadding * 2.0, alignSelf: 'center' }}>
             Forgot PIN?
         </Text>
     )
@@ -198,9 +198,9 @@ function forgotPINText() {
 function enterPinInfo() {
     return (
         <View style={{ alignItems: 'center' }}>
-            <Text style={{ ...Fonts.black17SemiBold }}>Enter your PIN</Text>
-            <Text style={{ ...Fonts.gray15Medium, marginTop: Sizes.fixPadding - 3.0 }}>
-                Enter the secure PIN to access your account.
+            <Text style={{ ...Fonts.white17Bold }}>Enter your PIN</Text>
+            <Text style={{ ...Fonts.primaryColor15Medium, marginTop: Sizes.fixPadding - 3.0 }}>
+                4-Digit PIN to Easily Access Your Account
             </Text>
         </View>
     )
@@ -208,7 +208,7 @@ function enterPinInfo() {
 
 function logo() {
     return (
-        <Image source={require('../../assets/images/ggLogo.png')}
+        <Image source={require('../../../assets/images/ggLogo.png')}
             style={styles.logoImageStyle}
             resizeMode="contain"
         />
@@ -218,7 +218,7 @@ function logo() {
 function needHelpScreen() {
     return (
         <Text style={{
-            ...Fonts.primaryColor15Medium,
+            ...Fonts.white15Medium,
             alignSelf: 'flex-end',
             marginHorizontal: Sizes.fixPadding * 2.0,
             marginTop: Sizes.fixPadding * 2.0,
@@ -239,11 +239,7 @@ const styles = StyleSheet.create({
         width: width / 3.0,
         alignItems: 'center',
         justifyContent: 'center',
-        borderTopWidth: 1.0,
-        borderTopColor: '#E1E3E5',
-        borderRightColor: '#E1E3E5',
-        borderRightWidth: 1.0,
-        paddingVertical: Sizes.fixPadding + 3.0,
+        paddingVertical: Sizes.fixPadding + 25,
     },
     pinBoxContainerStyle: {
         width: 20.0,

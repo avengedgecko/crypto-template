@@ -160,7 +160,7 @@ function userInfo() {
         <View style={{ alignItems: 'center', marginVertical: Sizes.fixPadding * 2.0 }}>
             <View>
                 <Image
-                    source={require('../../assets/images/user/user_14.jpg')}
+                    source={require('../../../assets/images/user/user_14.jpg')}
                     style={{ height: 110.0, width: 110.0, borderRadius: 55.0 }}
                     resizeMode="contain"
                 />

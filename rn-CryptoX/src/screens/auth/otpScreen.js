@@ -32,7 +32,7 @@ class OTPScreen extends Component {
             <SafeAreaView style={{ flex: 1, backgroundColor: Colors.backColor }}>
                 <StatusBar translucent={false} backgroundColor={Colors.primaryColor} />
                 <View style={{ flex: 1, justifyContent: 'center' }}>
-                    <Feather name="arrow-left" size={25} color="black"
+                    <Feather name="arrow-left" size={25} color="white"
                         style={{ position: 'absolute', left: 15.0, top: 20.0 }}
                     />
                     {logo()}
@@ -131,10 +131,10 @@ class OTPScreen extends Component {
 function resendInfo() {
     return (
         <View style={styles.resendInfoContainerStyle}>
-            <Text style={{ ...Fonts.gray15Medium }}>
+            <Text style={{ ...Fonts.white15Medium}}>
                 Didn't receive OTP Code!
             </Text>
-            <Text style={{ ...Fonts.black19Bold, marginLeft: Sizes.fixPadding }}>
+            <Text style={{ ...Fonts.primaryColor16Medium, marginLeft: Sizes.fixPadding }}>
                 Resend
             </Text>
         </View>
@@ -144,17 +144,17 @@ function resendInfo() {
 function otpText() {
     return (
         <Text style={{
-            ...Fonts.gray16Bold, alignSelf: 'center',
+            ...Fonts.white16SemiBold, alignSelf: 'center',
             ...styles.otpTextContainerStyle,
         }}>
-            Enter the otp code from the phone we just sent you
+            Enter the otp code below
         </Text>
     )
 }
 
 function logo() {
     return (
-        <Image source={require('../../assets/images/ggLogo.png')}
+        <Image source={require('../../../assets/images/ggLogo.png')}
             style={{ alignSelf: 'center', width: 150.0, height: 150.0, marginBottom: Sizes.fixPadding }}
             resizeMode="contain"
         />

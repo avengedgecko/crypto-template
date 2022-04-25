@@ -38,23 +38,23 @@ class BottomTabBarScreen extends Component {
                 <View style={styles.bottomTabBarStyle}>
                     {this.bottomTabBarItem({
                         index: 1,
-                        selectedIcon: require('../assets/images/icon/primary-color/home.png'),
-                        blurIcon: require('../assets/images/icon/grey/home.png'),
+                        selectedIcon: require('../../assets/images/icon/primary-color/home.png'),
+                        blurIcon: require('../../assets/images/icon/grey/home.png'),
                     })}
                     {this.bottomTabBarItem({
                         index: 2,
-                        selectedIcon: require('../assets/images/icon/primary-color/statistic.png'),
-                        blurIcon: require('../assets/images/icon/grey/statistic.png'),
+                        selectedIcon: require('../../assets/images/icon/primary-color/statistic.png'),
+                        blurIcon: require('../../assets/images/icon/grey/statistic.png'),
                     })}
                     {this.bottomTabBarItem({
                         index: 3,
-                        selectedIcon: require('../assets/images/icon/primary-color/portfolio.png'),
-                        blurIcon: require('../assets/images/icon/grey/portfolio.png'),
+                        selectedIcon: require('../../assets/images/icon/primary-color/portfolio.png'),
+                        blurIcon: require('../../assets/images/icon/grey/portfolio.png'),
                     })}
                     {this.bottomTabBarItem({
                         index: 4,
-                        selectedIcon: require('../assets/images/icon/primary-color/user.png'),
-                        blurIcon: require('../assets/images/icon/grey/user.png'),
+                        selectedIcon: require('../../assets/images/icon/primary-color/user.png'),
+                        blurIcon: require('../../assets/images/icon/grey/user.png'),
                     })}
                 </View>
             </View>
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
         left: 0.0,
         right: 0.0,
         height: 65.0,
-        backgroundColor: 'white',
+        backgroundColor: '#212121',
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
     },
     animatedView: {
         alignSelf: 'center',
-        backgroundColor: "black",
+        backgroundColor: "#212121",
         position: "absolute",
         bottom: -80,
         borderRadius: Sizes.fixPadding * 2.0,

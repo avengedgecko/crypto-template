@@ -199,25 +199,25 @@ export const Fonts = {
     },
 
     primaryColor15Medium: {
-        color: '#4B6AFF',
+        color: '#a754e2',
         fontSize: 15.0,
         fontFamily: 'Montserrat_Medium',
     },
 
     primaryColor16Medium: {
-        color: '#4B6AFF',
+        color: '#a754e2',
         fontSize: 16.0,
         fontFamily: 'Montserrat_Medium',
     },
 
     primaryColor17Medium: {
-        color: '#4B6AFF',
+        color: '#a754e2',
         fontSize: 17.0,
         fontFamily: 'Montserrat_Medium',
     },
 
     primaryColor17SemiBold: {
-        color: '#4B6AFF',
+        color: '#a754e2',
         fontSize: 17.0,
         fontFamily: 'Montserrat_SemiBold',
     },
@@ -232,7 +232,7 @@ export const Fonts = {
         color: 'red',
         fontSize: 17.0,
         fontFamily: 'Montserrat_SemiBold',
-    },
+    }
 
 }
 
@@ -240,7 +240,7 @@ export const Colors = {
     primaryColor: '#a754e2',
     blackColor: '#000000',
     whiteColor: '#ffffff',
-    backColor: '#F2F4F6',
+    backColor: '#212121',
     greenColor: '#006400',
     redColor: '#FF0000',
     orangeColor: '#FF9800',

@@ -67,7 +67,7 @@ class PortfolioScreen extends Component {
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                         <View style={styles.walletIconContainerStyle}>
                             <Image
-                                source={require('../../assets/images/icon/primary-color/wallet.png')}
+                                source={require('../../../assets/images/icon/primary-color/wallet.png')}
                                 resizeMode="contain"
                                 style={{ height: 30.0, width: 30.0 }}
                             />
@@ -134,7 +134,7 @@ class PortfolioScreen extends Component {
 const portfolioCurrencyList = [
     {
         id: '1',
-        logo: require('../../assets/images/crypto_icon/btc.png'),
+        logo: require('../../../assets/images/crypto_icon/btc.png'),
         name: 'Bitcoin',
         point: '2.685',
         sortName: 'BTC',
@@ -144,7 +144,7 @@ const portfolioCurrencyList = [
     },
     {
         id: '2',
-        logo: require('../../assets/images/crypto_icon/eth.png'),
+        logo: require('../../../assets/images/crypto_icon/eth.png'),
         name: 'Ethereum',
         point: '15.0256',
         sortName: 'ETH',
