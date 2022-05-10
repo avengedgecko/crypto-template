@@ -6,6 +6,7 @@ import TabBarScreen from "../../component/tabBarScreen";
 import { Ionicons } from '@expo/vector-icons';
 import { withNavigation } from 'react-navigation';
 
+
 class StatisticScreen extends Component {
 
     render() {
