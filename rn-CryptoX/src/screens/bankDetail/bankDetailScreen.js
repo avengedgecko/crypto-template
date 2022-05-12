@@ -39,9 +39,9 @@ class BankDetailScreen extends Component {
                         {this.ifscCodeTextField()}
                         {selectAccountTypeTitle()}
                         <View style={styles.accountTypesContainerStyle}>
-                            {this.accountTypes({ index: 1, title: 'Saving' })}
+                            {this.accountTypes({ index: 1, title: 'Checkings' })}
                             <View style={{ marginLeft: Sizes.fixPadding * 10.0 }}>
-                                {this.accountTypes({ index: 2, title: 'Current' })}
+                                {this.accountTypes({ index: 2, title: 'Savings' })}
                             </View>
                         </View>
                         {this.saveButton()}
@@ -91,8 +91,8 @@ class BankDetailScreen extends Component {
                 <OutlinedTextField
                     label='Account Number'
                     keyboardType="numeric"
-                    labelTextStyle={{ ...Fonts.black15Medium }}
-                    style={{ ...Fonts.black16SemiBold, }}
+                    labelTextStyle={{ ...Fonts.white15Medium }}
+                    style={{ ...Fonts.white16SemiBold, }}
                     value={this.state.accountNumber}
                     onChangeText={(value) => this.setState({ accountNumber: value })}
                 />
@@ -106,8 +106,8 @@ class BankDetailScreen extends Component {
                 <OutlinedTextField
                     label='IFSC Code'
                     keyboardType="numeric"
-                    labelTextStyle={{ ...Fonts.black15Medium }}
-                    style={{ ...Fonts.black15SemiBold, }}
+                    labelTextStyle={{ ...Fonts.white15Medium }}
+                    style={{ ...Fonts.white15SemiBold, }}
                     value={this.state.ifscCode}
                     onChangeText={(value) => this.setState({ ifscCode: value })}
                 />
@@ -119,7 +119,7 @@ class BankDetailScreen extends Component {
 function selectAccountTypeTitle() {
     return (
         <Text style={{
-            ...Fonts.black17SemiBold, marginHorizontal: Sizes.fixPadding * 2.0,
+            ...Fonts.white17SemiBold, marginHorizontal: Sizes.fixPadding * 2.0,
             marginVertical: Sizes.fixPadding
         }}>Select Acccount Type</Text>
     )
@@ -129,13 +129,13 @@ const { width } = Dimensions.get('screen');
 
 function congratulationsInfo() {
     return (
-        <View style={{ backgroundColor: '#D9DBDC' }}>
+        <View style={{ backgroundColor: '#212121' }}>
             <View style={styles.congratulationsInfoContainerStyle}>
                 <View style={styles.successIconContainerStyle}>
                     <Ionicons name="checkmark-sharp" size={25} color={Colors.whiteColor} />
                 </View>
                 <View style={{ marginLeft: Sizes.fixPadding + 5.0 }}>
-                    <Text style={{ ...Fonts.black16Medium }}>
+                    <Text style={{ ...Fonts.white16SemiBold }}>
                         Congratulations! You have successfully added your bank account details.
                     </Text>
 
@@ -164,7 +164,7 @@ const styles = StyleSheet.create({
     accountTypesContainerStyle: {
         flexDirection: 'row',
         marginHorizontal: Sizes.fixPadding * 2.0,
-        marginTop: Sizes.fixPadding - 7.0
+        marginTop: Sizes.fixPadding - 7.0,
     },
     radioButtonOuterContainerStyle: {
         height: 20.0,
