@@ -10,6 +10,7 @@ import { Snackbar } from 'react-native-paper';
 import { OutlinedTextField } from 'rn-material-ui-textfield';
 import { TransitionPresets } from 'react-navigation-stack';
 
+
 export default class CurrencyScreen extends Component {
 
     state = {
@@ -37,29 +38,27 @@ export default class CurrencyScreen extends Component {
 
     render() {
         return (
-            <SafeAreaView style={{ flex: 1, backgroundColor: "#F2F4F6" }}>
+            <SafeAreaView style={{ flex: 1, backgroundColor: "black" }}>
                 <StatusBar translucent={false} backgroundColor={Colors.primaryColor} />
                 <ScrollView>
                     {this.currencyNameAndAddRemoveInfo()}
                     {this.currencyInfo({ buyOrSell: 'Buy' })}
                     {chartInfo()}
-                    {portfolioTitle()}
-                    {portfolioInfo()}
                     {this.aboutCurrenyTitle()}
                     {aboutCurrencyDetail({
                         icon: require('../../../assets/images/icon/rank.png'),
                         title: 'Market Rank',
-                        value: '#1',
+                        value: "#585",
                     })}
                     {aboutCurrencyDetail({
                         icon: require('../../../assets/images/icon/market-cap.png'),
                         title: 'Market Cap',
-                        value: '$75535.74 Cr.',
+                        value: '$27,347,803',
                     })}
                     {aboutCurrencyDetail({
                         icon: require('../../../assets/images/icon/supply.png'),
                         title: 'Circulating Supply',
-                        value: `2 Cr. BTC`
+                        value: `85 Million`
                     })}
                     {this.whatIsCurrencyInfo()}
                     {buyAndSellPriceDifferentInfo()}
@@ -88,11 +87,11 @@ export default class CurrencyScreen extends Component {
                     <Ionicons
                         name="arrow-back"
                         size={24}
-                        color={Colors.blackColor}
+                        color={Colors.whiteColor}
                         onPress={() => this.props.navigation.goBack()}
                     />
-                    <Text style={{ marginLeft: Sizes.fixPadding + 5.0, ...Fonts.black17Bold }}>
-                        BTC
+                    <Text style={{ marginLeft: Sizes.fixPadding + 5.0, ...Fonts.white17Bold }}>
+                        WILD
                     </Text>
                 </View>
                 <TouchableOpacity
@@ -116,23 +115,23 @@ export default class CurrencyScreen extends Component {
         return (
             <View style={styles.currencyInfoContainerStyle}>
                 <View style={styles.currencyLogoContainerStyle}>
-                    <Image source={require('../../../assets/images/crypto_icon/btc.png')}
+                    <Image source={require('../../../assets/images/crypto_icon/wildLogo.png')}
                         style={{ height: 40.0, width: 40.0 }}
                         resizeMode="contain"
                     />
                 </View>
                 <View style={{ marginHorizontal: Sizes.fixPadding, }}>
-                    <Text style={{ ...Fonts.black15Medium }}>Current BTC {buyOrSell} Price</Text>
+                    <Text style={{ ...Fonts.white15Medium }}>Current WILD {buyOrSell} Price</Text>
                     <View style={{ flexDirection: 'row', marginTop: Sizes.fixPadding - 5.0 }}>
-                        <Text style={{ ...Fonts.black16Bold, marginRight: Sizes.fixPadding + 10.0 }}>
-                            $39,914
+                        <Text style={{ ...Fonts.white17Bold, marginRight: Sizes.fixPadding + 10.0 }}>
+                            $0.3081
                         </Text>
                         <AntDesign
-                            name="caretup" size={12}
-                            color={Colors.primaryColor}
+                            name="caretdown" size={12}
+                            color={Colors.redColor}
                             style={{ marginTop: 3.0, marginRight: Sizes.fixPadding - 2.0 }}
                         />
-                        <Text style={{ ...Fonts.primaryColor16Medium }}>4.65%</Text>
+                        <Text style={{ ...Fonts.red17Medium }}>33.3%</Text>
                     </View>
                 </View>
             </View>
@@ -142,8 +141,8 @@ export default class CurrencyScreen extends Component {
     aboutCurrenyTitle() {
         return (
             <View style={styles.aboutCurrencyTitleContainerStyle}>
-                <Text style={{ ...Fonts.black17SemiBold }}>
-                    About BTC
+                <Text style={{ ...Fonts.white17Bold }}>
+                    About Wilder Worlds
                 </Text>
             </View>
         )
@@ -152,12 +151,11 @@ export default class CurrencyScreen extends Component {
     whatIsCurrencyInfo() {
         return (
             <View style={styles.whatIsCurrencyTitleContainerStyle}>
-                <Text style={{ ...Fonts.black16SemiBold }}>
-                    What is BTC?
+                <Text style={{ ...Fonts.white16SemiBold }}>
+                    What is WILD?
                 </Text>
-                <Text style={{ ...Fonts.blackMedium, paddingTop: Sizes.fixPadding }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam finibus, augue quis vehicula fermentum, libero purus congue mauris, a luctus ipsum orci in mauris. Phasellus consectetur sed libero at gravida. In hac habitasse platea dictumst.
-                </Text>
+                <Text style={{ ...Fonts.white15Medium, paddingTop: Sizes.fixPadding }}>
+                    Wilder World is the first truly liquid, fully decentralized, community led NFT marketplace with no artist fees and its own dynamic token system.</Text>
             </View>
         )
     }
@@ -216,12 +214,12 @@ export default class CurrencyScreen extends Component {
         return (
             <View style={{ paddingHorizontal: Sizes.fixPadding * 2.0 }}>
                 <OutlinedTextField
-                    label='Value'
+                    label='Amount'
                     keyboardType='phone-pad'
                     suffix='USD'
-                    labelTextStyle={{ ...Fonts.black15Medium }}
-                    style={{ ...Fonts.black16Medium, }}
-                    baseColor="gray"
+                    labelTextStyle={{ ...Fonts.white15Medium }}
+                    style={{ ...Fonts.white16Medium, }}
+                    baseColor="white"
                     value={this.state.value}
                     onChangeText={(text) => this.setState({ value: text })}
                 />
@@ -239,13 +237,13 @@ export default class CurrencyScreen extends Component {
                     activeOpacity={0.9}
                     onPress={() => { this.setState({ showBottomSheet: false }) }}
                     style={{
-                        backgroundColor: 'white',
+                        backgroundColor: '#212121',
                         borderTopLeftRadius: Sizes.fixPadding,
                         borderTopRightRadius: Sizes.fixPadding,
                     }}
                 >
                     <View style={{
-                        paddingVertical: Sizes.fixPadding, backgroundColor: 'white',
+                        paddingVertical: Sizes.fixPadding, backgroundColor: 'black',
                         borderTopLeftRadius: Sizes.fixPadding,
                         borderTopRightRadius: Sizes.fixPadding,
                     }}>
@@ -254,7 +252,7 @@ export default class CurrencyScreen extends Component {
                             paddingVertical: Sizes.fixPadding + 5.0,
                             paddingHorizontal: Sizes.fixPadding * 2.0,
                         }}>
-                            {this.state.isBuy ? `Buy` : 'Sell'} Bitcoin (BTC)
+                            {this.state.isBuy ? `Buy` : 'Sell'} Wilder Worlds (WILD)
                         </Text>
                         <View style={{
                             backgroundColor: 'gray', height: 0.5,
@@ -265,7 +263,6 @@ export default class CurrencyScreen extends Component {
                         </View>
                         {this.currencyInfo({ buyOrSell: this.state.isBuy ? `Buy` : 'Sell' })}
                         {this.valueTextField()}
-                        {this.amountTextField()}
                         <TouchableOpacity
                             activeOpacity={0.9}
                             style={styles.buyOrSellButtonStyle}
@@ -283,21 +280,21 @@ export default class CurrencyScreen extends Component {
 const { width } = Dimensions.get('screen');
 
 const data = {
-    labels: [9, 11, 13, 15, 17],
+    labels: ['5/5', '5/6', '5/7', '5/8', '5/9', '5/10', '5/11', '5/12'],
     datasets: [
         {
-            data: [20, 45, 28, 80, 99, 43],
-            color: (opacity = 0.5) => `rgba(32, 147, 240, ${opacity})`, // optional
+            data: [1.25, 1.19, 1.22, 1.12, 0.95, 0.76, 0.50, 0.33],
+            color: (opacity = 0.5) => `rgb(167, 84, 226, ${opacity})`, // optional
         }
     ],
 };
 
 const chartConfig = {
-    backgroundGradientFrom: 'white',
-    backgroundGradientTo: "white",
-    fillShadowGradient: '#3EA3F5',
-    fillShadowGradientOpacity: 4,
-    color: (opacity = 1) => `gray`,
+    backgroundGradientFrom: '#212121',
+    backgroundGradientTo: "#212121",
+    fillShadowGradient: Colors.primaryColor,
+    fillShadowGradientOpacity: 90,
+    color: (opacity = 1) => `white`,
     strokeWidth: 1,
     barRadius: 2,
     decimalPlaces: 2,
@@ -305,18 +302,9 @@ const chartConfig = {
 
 function chartInfo() {
     return (
-        <View style={{ backgroundColor: 'white', marginBottom: Sizes.fixPadding, }}>
-            <LineChart
-                data={data}
-                width={width}
-                height={250}
-                chartConfig={chartConfig}
-                withDots={false}
-                fromZero={true}
-                style={{
-                    alignSelf: 'center',
-                    paddingTop: Sizes.fixPadding,
-                }}
+        <View style={{ backgroundColor: 'black' }}>
+            <Image source={require('../../../assets/images/graphImage.jpg')}
+                   style={{width: 400, height: 420, marginBottom: 10 }}
             />
         </View>
     )
@@ -325,23 +313,30 @@ function chartInfo() {
 function buyAndSellPriceDifferentInfo() {
     return (
         <View style={{
-            backgroundColor: 'white', paddingHorizontal: Sizes.fixPadding * 2.0,
+            backgroundColor: 'black', paddingHorizontal: Sizes.fixPadding * 2.0,
             paddingTop: Sizes.fixPadding,
             paddingBottom: Sizes.fixPadding * 6.0
         }}>
-            <Text style={{ ...Fonts.black16SemiBold }}>
-                Why is the Buy Price and Sell Price different in BTC?
+            <Text style={{ ...Fonts.white17Bold }}>
+                Exciting New Wilder Worlds Content
             </Text>
-            <Text style={{ ...Fonts.blackMedium, paddingTop: Sizes.fixPadding }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam finibus, augue quis vehicula fermentum, libero purus congue mauris, a luctus ipsum orci in mauris. Phasellus consectetur sed libero at gravida. In hac habitasse platea dictumst.Integer turpis eros, venenatis eget sapien tincidunt, porttitor efficitur tortor.Integer id consectetur nisl.
-            </Text>
+
+            <Image source={require('../../../assets/images/cryptoVid1.jpg')}
+                   style={{width: 355, height: 290, marginBottom: 10 }}
+            />
+            <Image source={require('../../../assets/images/cryptoVid2.jpg')}
+                   style={{width: 355, height: 290, marginBottom: 10 }}
+            />
+            <Image source={require('../../../assets/images/cryptoVid3.jpg')}
+                   style={{width: 355, height: 290, marginBottom: 10 }}
+            />
         </View>
     )
 }
 
 function aboutCurrencyDetail({ icon, title, value }) {
     return (
-        <View style={{ backgroundColor: 'white', paddingHorizontal: Sizes.fixPadding * 2.0 }}>
+        <View style={{ backgroundColor: 'black', paddingHorizontal: Sizes.fixPadding * 2.0 }}>
             <View style={{
                 flexDirection: 'row', justifyContent: 'space-between',
                 paddingVertical: Sizes.fixPadding * 2.0
@@ -351,9 +346,9 @@ function aboutCurrencyDetail({ icon, title, value }) {
                         style={{ height: 20.0, width: 20.0 }}
                         resizeMode="contain"
                     />
-                    <Text style={{ marginLeft: Sizes.fixPadding, ...Fonts.black15Medium }}>{title}</Text>
+                    <Text style={{ marginLeft: Sizes.fixPadding, ...Fonts.white16SemiBold }}>{title}</Text>
                 </View>
-                <Text style={{ ...Fonts.black16SemiBold }}>{value}</Text>
+                <Text style={{ ...Fonts.white16SemiBold }}>{value}</Text>
             </View>
             <View style={{ height: 0.40, backgroundColor: 'gray', marginBottom: Sizes.fixPadding }}></View>
         </View>
@@ -429,10 +424,10 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         paddingHorizontal: Sizes.fixPadding * 2.0,
         paddingVertical: Sizes.fixPadding * 2.0,
-        backgroundColor: 'white'
+        backgroundColor: 'black'
     },
     addRemoveCurrencyContainerStyle: {
-        backgroundColor: 'white',
+        backgroundColor: 'black',
         borderColor: Colors.primaryColor,
         height: 40.0,
         width: 40.0,
@@ -468,20 +463,19 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     currencyInfoContainerStyle: {
-        backgroundColor: 'white',
+        backgroundColor: 'black',
         flexDirection: 'row',
         alignItems: 'center',
         paddingBottom: Sizes.fixPadding * 2.0,
         paddingHorizontal: Sizes.fixPadding * 2.0,
     },
     aboutCurrencyTitleContainerStyle: {
-        backgroundColor: 'white',
-        marginTop: Sizes.fixPadding * 2.0,
-        paddingTop: Sizes.fixPadding + 5.0,
+        backgroundColor: 'black',
+        marginBottom: 10,
         paddingHorizontal: Sizes.fixPadding * 2.0
     },
     whatIsCurrencyTitleContainerStyle: {
-        backgroundColor: 'white',
+        backgroundColor: 'black',
         paddingHorizontal: Sizes.fixPadding * 2.0,
         paddingVertical: Sizes.fixPadding
     },
