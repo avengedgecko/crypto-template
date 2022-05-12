@@ -26,7 +26,7 @@ class DepositScreen extends Component {
 
     render() {
         return (
-            <SafeAreaView style={{ flex: 1, backgroundColor: '#FAFAFA' }}>
+            <SafeAreaView style={{ flex: 1, backgroundColor: '#212121' }}>
                 <StatusBar translucent={false} backgroundColor={Colors.primaryColor} />
                 <View style={{ flex: 1, justifyContent: 'center' }}>
                     {currentBalanceInfo()}
