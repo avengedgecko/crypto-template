@@ -17,7 +17,7 @@ class UserScreen extends Component {
 
     render() {
         return (
-            <SafeAreaView style={{ flex: 1, backgroundColor: '#F2F4F6' }}>
+            <SafeAreaView style={{ flex: 1, backgroundColor: '#212121' }}>
                 <StatusBar translucent={false} backgroundColor={Colors.primaryColor} />
                 <View style={{ flex: 1, paddingBottom: Sizes.fixPadding * 6.0 }}>
                     <ScrollView>
@@ -28,26 +28,25 @@ class UserScreen extends Component {
                         >
                             {informations(
                                 {
-                                    icon: <Ionicons name="person-sharp" size={26} color="black" />,
+                                    icon: <Ionicons name="person-sharp" size={26} color="white" />,
                                     title: 'Edit Profile',
                                     description: 'Edit your profile'
                                 }
                             )}
                         </TouchableOpacity>
-                        {divider()}
+
                         <TouchableOpacity
                             activeOpacity={0.9}
                             onPress={() => this.props.navigation.navigate('BankDetail')}
                         >
                             {informations(
                                 {
-                                    icon: <MaterialCommunityIcons name="bank" size={29} color="black" />,
+                                    icon: <MaterialCommunityIcons name="bank" size={29} color="white" />,
                                     title: 'Bank Details',
                                     description: 'This account is used to facilitate all your deposits and withdrawals'
                                 }
                             )}
                         </TouchableOpacity>
-
                         <View style={{ marginVertical: Sizes.fixPadding }}>
                             <TouchableOpacity
                                 activeOpacity={0.9}
@@ -55,30 +54,30 @@ class UserScreen extends Component {
                             >
                                 {informations(
                                     {
-                                        icon: <MaterialIcons name="headset-mic" size={29} color="black" />,
+                                        icon: <MaterialIcons name="headset-mic" size={29} color="white" />,
                                         title: 'Help & Support',
                                         description: 'Create a ticket and we will contact you'
                                     }
                                 )}
                             </TouchableOpacity>
-                            {divider()}
+
                             <TouchableOpacity
                                 activeOpacity={0.9}
                                 onPress={() => this.props.navigation.navigate('PrivacyPolicy')}
                             >
                                 {informations(
                                     {
-                                        icon: <MaterialIcons name="privacy-tip" size={29} color="black" />,
+                                        icon: <MaterialIcons name="privacy-tip" size={29} color="white" />,
                                         title: 'Privacy Policy',
                                         description: 'How we work & use your data'
                                     }
                                 )}
                             </TouchableOpacity>
 
-                            {divider()}
+
                             {informations(
                                 {
-                                    icon: <Ionicons name="star-outline" size={27} color="black" />,
+                                    icon: <Ionicons name="star-outline" size={27} color="white" />,
                                     title: 'Rate Us',
                                     description: 'Tell us what you think'
                                 }
@@ -86,8 +85,8 @@ class UserScreen extends Component {
                         </View>
                         {informations(
                             {
-                                icon: <MaterialCommunityIcons name="android" size={29} color="black" />,
-                                title: 'About CryptoX',
+                                icon: <MaterialCommunityIcons name="android" size={29} color="green" />,
+                                title: 'About GoodGains Exchange',
                                 description: 'v1.0.0'
                             }
                         )}
@@ -137,13 +136,13 @@ class UserScreen extends Component {
                 activeOpacity={0.9}
                 onPress={() => this.setState({ showLogoutDialog: true })}
                 style={{
-                    backgroundColor: Colors.whiteColor,
+                    backgroundColor: '#212121',
                     marginTop: Sizes.fixPadding,
                     marginBottom: Sizes.fixPadding * 3.0
                 }}>
                 <View style={styles.informationContainerStyle}>
                     <View style={styles.iconContainerStyle}>
-                        <MaterialCommunityIcons name="login-variant" size={29} color="black" />
+                        <MaterialCommunityIcons name="login-variant" size={29} color="white" />
                     </View>
                     <Text style={{ ...Fonts.red17SemiBold, marginLeft: Sizes.fixPadding + 5.0, }}>
                         Logout
@@ -170,10 +169,10 @@ function userInfo() {
             </View>
             <Text style={{ ...Fonts.gray15Medium, marginTop: Sizes.fixPadding }}>
             </Text>
-            <Text style={{ ...Fonts.black19Bold, marginVertical: Sizes.fixPadding - 5.0 }}>
-                Prter Jones
+            <Text style={{ ...Fonts.white20SemiBold, marginVertical: Sizes.fixPadding - 5.0 }}>
+                Peter Jones
             </Text>
-            <Text style={{ ...Fonts.gray16Medium }}>
+            <Text style={{ ...Fonts.white16Medium }}>
                 +1 123456987
             </Text>
         </View>
@@ -181,20 +180,20 @@ function userInfo() {
 }
 
 function divider() {
-    return <View style={{ height: 1.0, backgroundColor: "#EEEFF0" }}></View>
+    return <View style={{ height: 1.0, backgroundColor: Colors.primaryColor }}></View>
 }
 
 const { width } = Dimensions.get('screen');
 
 function informations({ icon, title, description }) {
     return (
-        <View style={{ backgroundColor: Colors.whiteColor }}>
+        <View style={{ backgroundColor: '#212121' }}>
             <View style={styles.informationContainerStyle}>
                 <View style={styles.iconContainerStyle}>
                     {icon}
                 </View>
                 <View style={{ marginLeft: Sizes.fixPadding + 5.0 }}>
-                    <Text style={{ ...Fonts.black16SemiBold }}>
+                    <Text style={{ ...Fonts.white17Bold }}>
                         {title}
                     </Text>
                     <Text style={{ ...Fonts.gray15Medium, }}>
@@ -222,7 +221,7 @@ const styles = StyleSheet.create(
         },
         informationContainerStyle: {
             flexDirection: "row",
-            backgroundColor: Colors.whiteColor,
+            backgroundColor: '#212121',
             alignItems: 'center',
             paddingVertical: Sizes.fixPadding + 5.0,
             width: width - 40.0,
@@ -239,11 +238,11 @@ const styles = StyleSheet.create(
             width: width - 90,
             paddingHorizontal: Sizes.fixPadding * 3.0,
             paddingTop: -Sizes.fixPadding,
-            paddingBottom: Sizes.fixPadding * 2.0
+            paddingBottom: Sizes.fixPadding * 2.0,
         },
         cancelButtonStyle: {
             flex: 0.50,
-            backgroundColor: Colors.whiteColor,
+            backgroundColor: 'white',
             alignItems: 'center',
             justifyContent: 'center',
             paddingVertical: Sizes.fixPadding,
