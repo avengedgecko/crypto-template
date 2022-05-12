@@ -56,7 +56,7 @@ export const tokenIds = [
         image: "https://assets.coingecko.com/coins/images/17139/large/10631.png?1635718182"
     },
     {
-        name: "My Neightbor Alice",
+        name: "My Neighbor Alice",
         id: "my-neighbor-alice",
         ticker: "ALICE",
         image: "https://assets.coingecko.com/coins/images/14375/large/alice_logo.jpg?1615782968"
@@ -420,6 +420,84 @@ export const TopLosersData = [
         isPositive: true,
         percentage: 4.55,
         amount: '297.98',
+    },
+    {
+        id: '6',
+        logo: require('../../assets/images/crypto_icon/bnb.png'),
+        name: 'Binance Coin',
+        sortName: 'BNB',
+        isPositive: false,
+        percentage: 3.43,
+        amount: '27.11',
+    },
+    {
+        id: '7',
+        logo: require('../../assets/images/crypto_icon/eos.png'),
+        name: 'EOS',
+        sortName: 'EOS',
+        isPositive: false,
+        percentage: 5.27,
+        amount: '3.44',
+    },
+    {
+        id: '8',
+        logo: require('../../assets/images/crypto_icon/xmr.png'),
+        name: 'Monero',
+        sortName: 'XMR',
+        isPositive: true,
+        percentage: 3.25,
+        amount: '1.54',
+    },
+    {
+        id: '9',
+        logo: require('../../assets/images/crypto_icon/usdt.png'),
+        name: 'Tether',
+        sortName: 'USDT',
+        isPositive: true,
+        percentage: 9.71,
+        amount: '1.23',
+    }
+];
+
+export const NftData = [
+    {
+        id: '1',
+        logo: require('../../assets/images/crypto_icon/btc.png'),
+        name: 'Bitcoin',
+        sortName: 'BTC',
+        amount: '10,136.73'
+    },
+    {
+        id: '2',
+        logo: require('../../assets/images/crypto_icon/eth.png'),
+        name: 'Ethereum',
+        sortName: 'ETH',
+        amount: '185.65'
+    },
+    {
+        id: '3',
+        logo: require('../../assets/images/crypto_icon/xrp.png'),
+        name: 'XRP',
+        sortName: 'XRP',
+        amount: '0.262855'
+    },
+    {
+        id: '4',
+        logo: require('../../assets/images/crypto_icon/bch.png'),
+        name: 'Bitcoin Cash',
+        sortName: 'BCH',
+        isPositive: true,
+        percentage: 4.55,
+        amount: '297.98',
+    },
+    {
+        id: '5',
+        logo: require('../../assets/images/crypto_icon/ltc.png'),
+        name: 'Litecoin',
+        sortName: 'LTC',
+        isPositive: true,
+        percentage: 7.12,
+        amount: '71.24',
     },
     {
         id: '6',
