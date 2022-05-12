@@ -84,7 +84,7 @@ class HomeScreen extends Component {
                 paddingBottom: 10,
                 backgroundColor: '#212121'
             }}>
-                <Text style={{ ...Fonts.white20SemiBold }}>Popular Currencies</Text>
+                <Text style={{ ...Fonts.white20SemiBold }}>Popular P2E Games</Text>
                 <TouchableOpacity
                     activeOpacity={0.9}
                     onPress={() => this.props.navigation.push('BottomTabScreen', { index: 2 })}
@@ -253,7 +253,6 @@ const portfolioList = [
 function portfolioInfo() {
 
     const renderItem = ({ item }) => (
-
         <View style={styles.portfolioContainerStyle}>
             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                 <Image source={item.image}
@@ -287,7 +286,7 @@ function portfolioInfo() {
                 </View>
             </View>
         </View>
-    )
+    );
 
     return (
         <FlatList
