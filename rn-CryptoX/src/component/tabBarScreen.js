@@ -20,6 +20,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import axios from 'axios';
 
+let TabBarScreen;
 export default TabBarScreen = ({ navigation }) => {
 
     const [index, setIndex] = useState(0);
@@ -59,7 +60,7 @@ export default TabBarScreen = ({ navigation }) => {
             case 'first':
                 return <Currency data={coinData} navigation={navigation} />;
             case 'second':
-                return <WatchList data={coinData} navigation={navigation} />;
+                return <Currency data={WatchlistData} navigation={navigation} />;
             case 'third':
                 return <Currency data={TopGainerData} navigation={navigation} />;
             case 'forth':
@@ -178,7 +179,7 @@ const WatchList = ({ coinData, navigation }) => {
     const renderHiddenItem = (data, rowMap) => (
         <View style={styles.rowBack}>
             <TouchableOpacity
-                style={styles.backDeleteContinerStyle}
+                style={styles.backDeleteContainerStyle}
                 onPress={() => deleteRow(rowMap, data.item.key)}
             >
                 <Animated.View
@@ -251,7 +252,7 @@ const Currency = ({ data, navigation }) => {
                 <View style={{ flexDirection: 'row', alignItems: 'center', }}>
                     <Image
                         source={{uri: item.image}}
-                        style={{ height: 55.0, width: 55.0, borderRadius: 27.5 }}
+                        style={{ height: 55.0, width: 55.0, borderRadius: 50 }}
                         resizeMode="contain"
                     />
                     <View style={{ marginLeft: Sizes.fixPadding }}>
@@ -298,7 +299,7 @@ const styles = StyleSheet.create({
     currencyInfoContainerStyle: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        backgroundColor: 'white',
+        backgroundColor: '#f7f7f7',
         elevation: 2.0,
         borderRadius: Sizes.fixPadding * 2.0,
         alignItems: 'center',
@@ -324,7 +325,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         flex: 1.0,
     },
-    backDeleteContinerStyle: {
+    backDeleteContainerStyle: {
         alignItems: 'center',
         bottom: 10,
         justifyContent: 'center',
