@@ -16,7 +16,7 @@ export default class SuccessScreen extends Component {
     }
 
     handleBackButton = () => {
-        this.props.navigation.pop();
+        this.props.navigation.navigate('BottomTabScreen', { index: 1 })
         return true;
     };
 
@@ -38,11 +38,11 @@ export default class SuccessScreen extends Component {
                         marginHorizontal: Sizes.fixPadding * 2.0,
                         marginBottom: Sizes.fixPadding * 2.0
                     }}>
-                        You have successfully buy 2.0658 Bitcoin (Btc) at price of $37,568.
+                        You have successfully buy 4783.33 Wilder Worlds (WILD) at a price of $396.
                     </Text>
                     <TouchableOpacity
                         activeOpacity={0.9}
-                        onPress={() => this.props.navigation.navigate('Wrong')}
+                        onPress={() => this.props.navigation.navigate('BottomTabScreen', { index: 1 })}
                         style={styles.okButtonStyle}>
                         <Text style={{ ...Fonts.white16Medium }}>Okay!</Text>
                     </TouchableOpacity>
