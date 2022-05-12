@@ -2,10 +2,12 @@ import React, { Component } from "react";
 import { Text, View, Image, TouchableOpacity, StyleSheet, Dimensions, BackHandler } from "react-native";
 import HomeScreen from "../screens/home/homeScreen";
 import StatisticScreen from "../screens/statistic/statisticScreen";
+import NftMarketScreen from "../screens/nftMarket/nftMarketScreen";
 import PortfolioScreen from "../screens/portfolio/portfolioScreen";
 import UserScreen from "../screens/user/userScreen";
 import { withNavigation } from "react-navigation";
 import { Sizes } from "../constants/styles";
+
 
 class BottomTabBarScreen extends Component {
 
@@ -32,7 +34,7 @@ class BottomTabBarScreen extends Component {
                     this.currentIndex == 2 ?
                         <StatisticScreen /> :
                         this.currentIndex == 3 ?
-                            <PortfolioScreen /> :
+                            <NftMarketScreen /> :
                             <UserScreen />
                 }
                 <View style={styles.bottomTabBarStyle}>
@@ -48,8 +50,8 @@ class BottomTabBarScreen extends Component {
                     })}
                     {this.bottomTabBarItem({
                         index: 3,
-                        selectedIcon: require('../../assets/images/icon/primary-color/portfolio.png'),
-                        blurIcon: require('../../assets/images/icon/grey/portfolio.png'),
+                        selectedIcon: require('../../assets/images/icon/primary-color/nftActive.png'),
+                        blurIcon: require('../../assets/images/icon/grey/nft.png'),
                     })}
                     {this.bottomTabBarItem({
                         index: 4,
