@@ -13,8 +13,7 @@ export default class LoadingScreen extends React.Component {
         this.props.navigation.navigate('Splash');
     }
 
-    render() {
-        return (
+    
             <View style={{ flex: 1, backgroundColor: Colors.whiteColor }}></View>
         )
     }
